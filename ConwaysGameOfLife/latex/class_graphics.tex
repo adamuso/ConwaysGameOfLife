@@ -1,0 +1,264 @@
+\hypertarget{class_graphics}{}\section{Graphics Class Reference}
+\label{class_graphics}\index{Graphics@{Graphics}}
+
+
+Represents a graphics used to manipulate the console screen.  
+
+
+
+
+{\ttfamily \#include $<$Graphics.\+h$>$}
+
+Inheritance diagram for Graphics\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_graphics}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graphics_af2e8fe67fd31ec263c843a6e28b29d3c}{Graphics}} ()
+\begin{DoxyCompactList}\small\item\em Instantiates a new \mbox{\hyperlink{class_graphics}{Graphics}} object/ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_graphics_acfd935938e3e757e2952af5fec13115a}{$\sim$\+Graphics}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the graphics object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_a9b7d5d06b00c13570dc912e7ce72763c}{set\+Viewport}} (\mbox{\hyperlink{structmath_1_1_rectangle}{math\+::\+Rectangle}} value)
+\begin{DoxyCompactList}\small\item\em Sets the viewport used to clip the area that can be drawn. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structmath_1_1_rectangle}{math\+::\+Rectangle}} \& \mbox{\hyperlink{class_graphics_afaf7971888fc95f50fdde81ee4fb0fa7}{get\+Viewport}} () const
+\begin{DoxyCompactList}\small\item\em Gets the viewport data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_a42644ce7960c02a4a541fbb121fa4d95}{set\+Cursor\+Position}} (\mbox{\hyperlink{struct_point}{Point}} position) const
+\begin{DoxyCompactList}\small\item\em Sets the cursor position in the console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_aa2719845f973c66d61a6ecf9a8bddaf4}{set\+Offset}} (\mbox{\hyperlink{struct_point}{Point}} offset)
+\begin{DoxyCompactList}\small\item\em Sets the additional offset applied when drawing before clipping to viewport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_a6597cd34b1aaddd828259e29db4043f1}{redraw\+Point}} (int32\+\_\+t x, int32\+\_\+t y, char shape)
+\begin{DoxyCompactList}\small\item\em Redraws a point changing its shape but not the style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_a62c143f81f50dd3f15e256e46fa4bd62}{draw\+Point}} (int32\+\_\+t x, int32\+\_\+t y, char shape, Console\+Style style=Console\+Style\+::\+Default)
+\begin{DoxyCompactList}\small\item\em Draws a point changing its shape and style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_ad94f3dff74f676c640223ae9bcd805ff}{draw\+Text}} (int32\+\_\+t x, int32\+\_\+t y, std\+::string text, Console\+Style style=Console\+Style\+::\+Default)
+\begin{DoxyCompactList}\small\item\em Draws a text at given position with specified style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_a5006edbbdc540af376d4787f9d56fbdd}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_a11f04444e9fb3fc24ce14f6c1f2d19fc}{show\+Cursor}} () const
+\begin{DoxyCompactList}\small\item\em Shows the console cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_a99b40f5926338922848e8c85b235e592}{hide\+Cursor}} () const
+\begin{DoxyCompactList}\small\item\em Hides the console cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_abce7a73469960b556645afe23cb37ef9}{redraw}} ()
+\begin{DoxyCompactList}\small\item\em Redraws the console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_a9ea1070d0c5aecd499f40a7f1d9dabcc}{reset\+Viewport}} ()
+\begin{DoxyCompactList}\small\item\em Resets the viewport to its default state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphics_a90e45bd4d727b151cb7adf43d1c8a5f6}{resize\+Device}} (\mbox{\hyperlink{structmath_1_1_size}{math\+::\+Size}} size)
+\begin{DoxyCompactList}\small\item\em Resizes the device. Used to handle console size changing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a graphics used to manipulate the console screen. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graphics_af2e8fe67fd31ec263c843a6e28b29d3c}\label{class_graphics_af2e8fe67fd31ec263c843a6e28b29d3c}} 
+\index{Graphics@{Graphics}!Graphics@{Graphics}}
+\index{Graphics@{Graphics}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{Graphics()}{Graphics()}}
+{\footnotesize\ttfamily Graphics\+::\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Instantiates a new \mbox{\hyperlink{class_graphics}{Graphics}} object/ 
+
+\mbox{\Hypertarget{class_graphics_acfd935938e3e757e2952af5fec13115a}\label{class_graphics_acfd935938e3e757e2952af5fec13115a}} 
+\index{Graphics@{Graphics}!````~Graphics@{$\sim$Graphics}}
+\index{````~Graphics@{$\sim$Graphics}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{$\sim$Graphics()}{~Graphics()}}
+{\footnotesize\ttfamily Graphics\+::$\sim$\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the graphics object. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graphics_a5006edbbdc540af376d4787f9d56fbdd}\label{class_graphics_a5006edbbdc540af376d4787f9d56fbdd}} 
+\index{Graphics@{Graphics}!clear@{clear}}
+\index{clear@{clear}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Graphics\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the console. 
+
+\mbox{\Hypertarget{class_graphics_a62c143f81f50dd3f15e256e46fa4bd62}\label{class_graphics_a62c143f81f50dd3f15e256e46fa4bd62}} 
+\index{Graphics@{Graphics}!drawPoint@{drawPoint}}
+\index{drawPoint@{drawPoint}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{drawPoint()}{drawPoint()}}
+{\footnotesize\ttfamily void Graphics\+::draw\+Point (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{x,  }\item[{int32\+\_\+t}]{y,  }\item[{char}]{shape,  }\item[{Console\+Style}]{style = {\ttfamily ConsoleStyle\+:\+:Default} }\end{DoxyParamCaption})}
+
+
+
+Draws a point changing its shape and style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the point.\\
+\hline
+{\em y} & The y coordinate of the point.\\
+\hline
+{\em shape} & The shape to be set.\\
+\hline
+{\em style} & The style to be applied.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphics_ad94f3dff74f676c640223ae9bcd805ff}\label{class_graphics_ad94f3dff74f676c640223ae9bcd805ff}} 
+\index{Graphics@{Graphics}!drawText@{drawText}}
+\index{drawText@{drawText}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily void Graphics\+::draw\+Text (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{x,  }\item[{int32\+\_\+t}]{y,  }\item[{std\+::string}]{text,  }\item[{Console\+Style}]{style = {\ttfamily ConsoleStyle\+:\+:Default} }\end{DoxyParamCaption})}
+
+
+
+Draws a text at given position with specified style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the text.\\
+\hline
+{\em y} & The y coordinate of the text.\\
+\hline
+{\em text} & The text to be drawn.\\
+\hline
+{\em style} & The style to be applied.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphics_afaf7971888fc95f50fdde81ee4fb0fa7}\label{class_graphics_afaf7971888fc95f50fdde81ee4fb0fa7}} 
+\index{Graphics@{Graphics}!getViewport@{getViewport}}
+\index{getViewport@{getViewport}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{getViewport()}{getViewport()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmath_1_1_rectangle}{math\+::\+Rectangle}} \& Graphics\+::get\+Viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the viewport data. 
+
+\mbox{\Hypertarget{class_graphics_a99b40f5926338922848e8c85b235e592}\label{class_graphics_a99b40f5926338922848e8c85b235e592}} 
+\index{Graphics@{Graphics}!hideCursor@{hideCursor}}
+\index{hideCursor@{hideCursor}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{hideCursor()}{hideCursor()}}
+{\footnotesize\ttfamily void Graphics\+::hide\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Hides the console cursor. 
+
+\mbox{\Hypertarget{class_graphics_abce7a73469960b556645afe23cb37ef9}\label{class_graphics_abce7a73469960b556645afe23cb37ef9}} 
+\index{Graphics@{Graphics}!redraw@{redraw}}
+\index{redraw@{redraw}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{redraw()}{redraw()}}
+{\footnotesize\ttfamily void Graphics\+::redraw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Redraws the console. 
+
+\mbox{\Hypertarget{class_graphics_a6597cd34b1aaddd828259e29db4043f1}\label{class_graphics_a6597cd34b1aaddd828259e29db4043f1}} 
+\index{Graphics@{Graphics}!redrawPoint@{redrawPoint}}
+\index{redrawPoint@{redrawPoint}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{redrawPoint()}{redrawPoint()}}
+{\footnotesize\ttfamily void Graphics\+::redraw\+Point (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{x,  }\item[{int32\+\_\+t}]{y,  }\item[{char}]{shape }\end{DoxyParamCaption})}
+
+
+
+Redraws a point changing its shape but not the style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the point.\\
+\hline
+{\em y} & The y coordinate of the point.\\
+\hline
+{\em shape} & The shape to be set.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphics_a9ea1070d0c5aecd499f40a7f1d9dabcc}\label{class_graphics_a9ea1070d0c5aecd499f40a7f1d9dabcc}} 
+\index{Graphics@{Graphics}!resetViewport@{resetViewport}}
+\index{resetViewport@{resetViewport}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{resetViewport()}{resetViewport()}}
+{\footnotesize\ttfamily void Graphics\+::reset\+Viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the viewport to its default state. 
+
+\mbox{\Hypertarget{class_graphics_a90e45bd4d727b151cb7adf43d1c8a5f6}\label{class_graphics_a90e45bd4d727b151cb7adf43d1c8a5f6}} 
+\index{Graphics@{Graphics}!resizeDevice@{resizeDevice}}
+\index{resizeDevice@{resizeDevice}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{resizeDevice()}{resizeDevice()}}
+{\footnotesize\ttfamily void Graphics\+::resize\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmath_1_1_size}{math\+::\+Size}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Resizes the device. Used to handle console size changing. 
+
+\mbox{\Hypertarget{class_graphics_a42644ce7960c02a4a541fbb121fa4d95}\label{class_graphics_a42644ce7960c02a4a541fbb121fa4d95}} 
+\index{Graphics@{Graphics}!setCursorPosition@{setCursorPosition}}
+\index{setCursorPosition@{setCursorPosition}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{setCursorPosition()}{setCursorPosition()}}
+{\footnotesize\ttfamily void Graphics\+::set\+Cursor\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{position }\end{DoxyParamCaption}) const}
+
+
+
+Sets the cursor position in the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position to be set\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphics_aa2719845f973c66d61a6ecf9a8bddaf4}\label{class_graphics_aa2719845f973c66d61a6ecf9a8bddaf4}} 
+\index{Graphics@{Graphics}!setOffset@{setOffset}}
+\index{setOffset@{setOffset}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{setOffset()}{setOffset()}}
+{\footnotesize\ttfamily void Graphics\+::set\+Offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{offset }\end{DoxyParamCaption})}
+
+
+
+Sets the additional offset applied when drawing before clipping to viewport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The offset to be set\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphics_a9b7d5d06b00c13570dc912e7ce72763c}\label{class_graphics_a9b7d5d06b00c13570dc912e7ce72763c}} 
+\index{Graphics@{Graphics}!setViewport@{setViewport}}
+\index{setViewport@{setViewport}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{setViewport()}{setViewport()}}
+{\footnotesize\ttfamily void Graphics\+::set\+Viewport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmath_1_1_rectangle}{math\+::\+Rectangle}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the viewport used to clip the area that can be drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The rectangle to be set\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphics_a11f04444e9fb3fc24ce14f6c1f2d19fc}\label{class_graphics_a11f04444e9fb3fc24ce14f6c1f2d19fc}} 
+\index{Graphics@{Graphics}!showCursor@{showCursor}}
+\index{showCursor@{showCursor}!Graphics@{Graphics}}
+\subsubsection{\texorpdfstring{showCursor()}{showCursor()}}
+{\footnotesize\ttfamily void Graphics\+::show\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Shows the console cursor. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Graphics.\+h\item 
+Graphics.\+cpp\end{DoxyCompactItemize}

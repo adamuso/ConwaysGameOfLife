@@ -1,0 +1,123 @@
+\hypertarget{class_choose_file_view}{}\section{Choose\+File\+View Class Reference}
+\label{class_choose_file_view}\index{ChooseFileView@{ChooseFileView}}
+
+
+Represents a view that allows user to choose a file.  
+
+
+
+
+{\ttfamily \#include $<$Choose\+File\+View.\+h$>$}
+
+Inheritance diagram for Choose\+File\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_choose_file_view}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_choose_file_view_a49d02999d2bff55a4d9716987a7f2e5f}{Choose\+File\+View}} ()
+\begin{DoxyCompactList}\small\item\em Instantiates a new \mbox{\hyperlink{class_choose_file_view}{Choose\+File\+View}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_choose_file_view_aafd296eee3a027b1c71affb339dd66a4}{$\sim$\+Choose\+File\+View}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the choose file view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_choose_file_view_a029ba814f5f89c87f09dc23d61c936a6}{set\+Saving}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the value indicating that the view chooses a file to save and not to open. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_choose_file_view_a13417add6f5b093f225fcb9aabe15545}{get\+File\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Gets the chosen file path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_choose_file_view_a16e0c6bdcb247f7b792934c4d7901db5}{initialize}} () override
+\begin{DoxyCompactList}\small\item\em Overrides the method to make view initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_choose_file_view_a011a3bf65dfc4b5e02327760ab8370ea}{on\+Key\+Press}} (char key) override
+\begin{DoxyCompactList}\small\item\em Overrides the method allowing for view specific key responses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a view that allows user to choose a file. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_choose_file_view_a49d02999d2bff55a4d9716987a7f2e5f}\label{class_choose_file_view_a49d02999d2bff55a4d9716987a7f2e5f}} 
+\index{ChooseFileView@{ChooseFileView}!ChooseFileView@{ChooseFileView}}
+\index{ChooseFileView@{ChooseFileView}!ChooseFileView@{ChooseFileView}}
+\subsubsection{\texorpdfstring{ChooseFileView()}{ChooseFileView()}}
+{\footnotesize\ttfamily Choose\+File\+View\+::\+Choose\+File\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Instantiates a new \mbox{\hyperlink{class_choose_file_view}{Choose\+File\+View}} object. 
+
+\mbox{\Hypertarget{class_choose_file_view_aafd296eee3a027b1c71affb339dd66a4}\label{class_choose_file_view_aafd296eee3a027b1c71affb339dd66a4}} 
+\index{ChooseFileView@{ChooseFileView}!````~ChooseFileView@{$\sim$ChooseFileView}}
+\index{````~ChooseFileView@{$\sim$ChooseFileView}!ChooseFileView@{ChooseFileView}}
+\subsubsection{\texorpdfstring{$\sim$ChooseFileView()}{~ChooseFileView()}}
+{\footnotesize\ttfamily virtual Choose\+File\+View\+::$\sim$\+Choose\+File\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the choose file view. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_choose_file_view_a13417add6f5b093f225fcb9aabe15545}\label{class_choose_file_view_a13417add6f5b093f225fcb9aabe15545}} 
+\index{ChooseFileView@{ChooseFileView}!getFilePath@{getFilePath}}
+\index{getFilePath@{getFilePath}!ChooseFileView@{ChooseFileView}}
+\subsubsection{\texorpdfstring{getFilePath()}{getFilePath()}}
+{\footnotesize\ttfamily std\+::string Choose\+File\+View\+::get\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the chosen file path. 
+
+\mbox{\Hypertarget{class_choose_file_view_a16e0c6bdcb247f7b792934c4d7901db5}\label{class_choose_file_view_a16e0c6bdcb247f7b792934c4d7901db5}} 
+\index{ChooseFileView@{ChooseFileView}!initialize@{initialize}}
+\index{initialize@{initialize}!ChooseFileView@{ChooseFileView}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Choose\+File\+View\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method to make view initialization. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_view_a334fa9a19d2faca0120ef2869c3dd8ad}{View}}.
+
+\mbox{\Hypertarget{class_choose_file_view_a011a3bf65dfc4b5e02327760ab8370ea}\label{class_choose_file_view_a011a3bf65dfc4b5e02327760ab8370ea}} 
+\index{ChooseFileView@{ChooseFileView}!onKeyPress@{onKeyPress}}
+\index{onKeyPress@{onKeyPress}!ChooseFileView@{ChooseFileView}}
+\subsubsection{\texorpdfstring{onKeyPress()}{onKeyPress()}}
+{\footnotesize\ttfamily void Choose\+File\+View\+::on\+Key\+Press (\begin{DoxyParamCaption}\item[{char}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method allowing for view specific key responses. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_control_a4731a62a9ea0510d51924509ae74c93e}{Control}}.
+
+\mbox{\Hypertarget{class_choose_file_view_a029ba814f5f89c87f09dc23d61c936a6}\label{class_choose_file_view_a029ba814f5f89c87f09dc23d61c936a6}} 
+\index{ChooseFileView@{ChooseFileView}!setSaving@{setSaving}}
+\index{setSaving@{setSaving}!ChooseFileView@{ChooseFileView}}
+\subsubsection{\texorpdfstring{setSaving()}{setSaving()}}
+{\footnotesize\ttfamily void Choose\+File\+View\+::set\+Saving (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the value indicating that the view chooses a file to save and not to open. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Choose\+File\+View.\+h\item 
+Choose\+File\+View.\+cpp\end{DoxyCompactItemize}

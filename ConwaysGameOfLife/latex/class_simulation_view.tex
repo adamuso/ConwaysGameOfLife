@@ -1,0 +1,193 @@
+\hypertarget{class_simulation_view}{}\section{Simulation\+View Class Reference}
+\label{class_simulation_view}\index{SimulationView@{SimulationView}}
+
+
+Represents the view displaying the simulation.  
+
+
+
+
+{\ttfamily \#include $<$Simulation\+View.\+h$>$}
+
+Inheritance diagram for Simulation\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_simulation_view}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simulation_view_a2a540299f494c98c8b5bd61bfa0df420}{Simulation\+View}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_simulation_options}{Simulation\+Options}} $>$ options)
+\begin{DoxyCompactList}\small\item\em Instantiates the \mbox{\hyperlink{class_simulation_view}{Simulation\+View}} using given options. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_simulation_view_aecea878e3f70e00c9d618ec939ebaf7e}{Simulation\+View}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_simulation_options}{Simulation\+Options}} $>$ options, \mbox{\hyperlink{class_ref}{Ref}}$<$ uint8\+\_\+t\mbox{[}$\,$\mbox{]}$>$ cells)
+\begin{DoxyCompactList}\small\item\em Instantiates the \mbox{\hyperlink{class_simulation_view}{Simulation\+View}} using given options and cell data. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_simulation_view_ad10f4de06a743fb8919f2be1e6585210}{$\sim$\+Simulation\+View}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the simulation view. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_simulation}{Simulation}} $>$ \& \mbox{\hyperlink{class_simulation_view_a3a1483e1750ad6251ea1cff1f39dcefa}{get\+Simulation}} () const
+\begin{DoxyCompactList}\small\item\em Gets the simulation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_view_a5b0c0ffd8978f7841286be2d06483914}{set\+Camera\+Size}} (int32\+\_\+t width, int32\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Sets the size of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_view_ad54da8596a97ae64ecf71b05038587fc}{initialize}} () override
+\begin{DoxyCompactList}\small\item\em Overrides the method allowing for view initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_view_a04da3a65238673745d1aa7ed030c4780}{move\+Camera}} (int32\+\_\+t offsetX, int32\+\_\+t offsetY)
+\begin{DoxyCompactList}\small\item\em Moves the camera by the specified offset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_view_a6e28ca1ab7e2805561d4c3ec9e6c7d7c}{update}} () override
+\begin{DoxyCompactList}\small\item\em Overrides the method allowing for simulation updating. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_view_a088d2d9c386b7202fe0d552323c137c3}{on\+Draw}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \&graphics) override
+\begin{DoxyCompactList}\small\item\em Overrides the method allowing for simulation to be drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_view_a3663c5246a999ab4f2ffd503c0e3d274}{on\+Key\+Press}} (char key) override
+\begin{DoxyCompactList}\small\item\em Overrides the method allowing for simulation manipulation with key presses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents the view displaying the simulation. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_simulation_view_a2a540299f494c98c8b5bd61bfa0df420}\label{class_simulation_view_a2a540299f494c98c8b5bd61bfa0df420}} 
+\index{SimulationView@{SimulationView}!SimulationView@{SimulationView}}
+\index{SimulationView@{SimulationView}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{SimulationView()}{SimulationView()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Simulation\+View\+::\+Simulation\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_simulation_options}{Simulation\+Options}} $>$}]{options }\end{DoxyParamCaption})}
+
+
+
+Instantiates the \mbox{\hyperlink{class_simulation_view}{Simulation\+View}} using given options. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & The options used to create the simulation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_view_aecea878e3f70e00c9d618ec939ebaf7e}\label{class_simulation_view_aecea878e3f70e00c9d618ec939ebaf7e}} 
+\index{SimulationView@{SimulationView}!SimulationView@{SimulationView}}
+\index{SimulationView@{SimulationView}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{SimulationView()}{SimulationView()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Simulation\+View\+::\+Simulation\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_simulation_options}{Simulation\+Options}} $>$}]{options,  }\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ uint8\+\_\+t\mbox{[}$\,$\mbox{]}$>$}]{cells }\end{DoxyParamCaption})}
+
+
+
+Instantiates the \mbox{\hyperlink{class_simulation_view}{Simulation\+View}} using given options and cell data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & The options used to create the simulation.\\
+\hline
+{\em cells} & The cell data used to populate the simulation.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_view_ad10f4de06a743fb8919f2be1e6585210}\label{class_simulation_view_ad10f4de06a743fb8919f2be1e6585210}} 
+\index{SimulationView@{SimulationView}!````~SimulationView@{$\sim$SimulationView}}
+\index{````~SimulationView@{$\sim$SimulationView}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{$\sim$SimulationView()}{~SimulationView()}}
+{\footnotesize\ttfamily virtual Simulation\+View\+::$\sim$\+Simulation\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the simulation view. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simulation_view_a3a1483e1750ad6251ea1cff1f39dcefa}\label{class_simulation_view_a3a1483e1750ad6251ea1cff1f39dcefa}} 
+\index{SimulationView@{SimulationView}!getSimulation@{getSimulation}}
+\index{getSimulation@{getSimulation}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{getSimulation()}{getSimulation()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_simulation}{Simulation}} $>$ \& Simulation\+View\+::get\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the simulation. 
+
+\mbox{\Hypertarget{class_simulation_view_ad54da8596a97ae64ecf71b05038587fc}\label{class_simulation_view_ad54da8596a97ae64ecf71b05038587fc}} 
+\index{SimulationView@{SimulationView}!initialize@{initialize}}
+\index{initialize@{initialize}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Simulation\+View\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method allowing for view initialization. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_view_a334fa9a19d2faca0120ef2869c3dd8ad}{View}}.
+
+\mbox{\Hypertarget{class_simulation_view_a04da3a65238673745d1aa7ed030c4780}\label{class_simulation_view_a04da3a65238673745d1aa7ed030c4780}} 
+\index{SimulationView@{SimulationView}!moveCamera@{moveCamera}}
+\index{moveCamera@{moveCamera}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{moveCamera()}{moveCamera()}}
+{\footnotesize\ttfamily void Simulation\+View\+::move\+Camera (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{offsetX,  }\item[{int32\+\_\+t}]{offsetY }\end{DoxyParamCaption})}
+
+
+
+Moves the camera by the specified offset. 
+
+\mbox{\Hypertarget{class_simulation_view_a088d2d9c386b7202fe0d552323c137c3}\label{class_simulation_view_a088d2d9c386b7202fe0d552323c137c3}} 
+\index{SimulationView@{SimulationView}!onDraw@{onDraw}}
+\index{onDraw@{onDraw}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{onDraw()}{onDraw()}}
+{\footnotesize\ttfamily void Simulation\+View\+::on\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \&}]{graphics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method allowing for simulation to be drawn. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_control_a5f89270d0d05a6bac9128db0b1d290d2}{Control}}.
+
+\mbox{\Hypertarget{class_simulation_view_a3663c5246a999ab4f2ffd503c0e3d274}\label{class_simulation_view_a3663c5246a999ab4f2ffd503c0e3d274}} 
+\index{SimulationView@{SimulationView}!onKeyPress@{onKeyPress}}
+\index{onKeyPress@{onKeyPress}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{onKeyPress()}{onKeyPress()}}
+{\footnotesize\ttfamily void Simulation\+View\+::on\+Key\+Press (\begin{DoxyParamCaption}\item[{char}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method allowing for simulation manipulation with key presses. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_control_a4731a62a9ea0510d51924509ae74c93e}{Control}}.
+
+\mbox{\Hypertarget{class_simulation_view_a5b0c0ffd8978f7841286be2d06483914}\label{class_simulation_view_a5b0c0ffd8978f7841286be2d06483914}} 
+\index{SimulationView@{SimulationView}!setCameraSize@{setCameraSize}}
+\index{setCameraSize@{setCameraSize}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{setCameraSize()}{setCameraSize()}}
+{\footnotesize\ttfamily void Simulation\+View\+::set\+Camera\+Size (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{width,  }\item[{int32\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets the size of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The new width of the camera.\\
+\hline
+{\em height} & The new height of the camera.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_view_a6e28ca1ab7e2805561d4c3ec9e6c7d7c}\label{class_simulation_view_a6e28ca1ab7e2805561d4c3ec9e6c7d7c}} 
+\index{SimulationView@{SimulationView}!update@{update}}
+\index{update@{update}!SimulationView@{SimulationView}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Simulation\+View\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method allowing for simulation updating. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_view_aee97523bb9aaf26c1d09528e4f6911b7}{View}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Simulation\+View.\+h\item 
+Simulation\+View.\+cpp\end{DoxyCompactItemize}

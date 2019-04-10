@@ -1,0 +1,175 @@
+\hypertarget{class_label}{}\section{Label Class Reference}
+\label{class_label}\index{Label@{Label}}
+
+
+Represents a label displaying a static text.  
+
+
+
+
+{\ttfamily \#include $<$Label.\+h$>$}
+
+Inheritance diagram for Label\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_label}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_label_af8f2bccf9faadcb2ca964bd2347dde24}{Label}} ()
+\begin{DoxyCompactList}\small\item\em Instantiates a new \mbox{\hyperlink{class_label}{Label}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_label_a21f4dd9aa297a03f641dd689ea291e2b}{$\sim$\+Label}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_label_a8b4c56829c676960e9bb9000eaa83963}{set\+Style}} (Console\+Style value)
+\begin{DoxyCompactList}\small\item\em Sets the style for the label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_label_a11354abcef74d29dca59ee029521d04b}{set\+Width}} (int width)
+\begin{DoxyCompactList}\small\item\em Sets the width of the label. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_label_a81c445ff99fbdfa3ca662783568adda8}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Gets the width of the label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_label_ac97689cc2fa667ef92da9904b1679fd5}{set\+Height}} (int value)
+\begin{DoxyCompactList}\small\item\em Sets the height of the label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_label_a6bc9eefce325e64edb7d1aca939093fb}{set\+Text}} (std\+::string text)
+\begin{DoxyCompactList}\small\item\em Sets the displayed text of the label. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_label_a5306a233501af781095f08e95ebcfb23}{get\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Gets the displayed text of the label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_label_ac418a8328a971f5da7f46c9c6e9fd7e5}{on\+Draw}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \&graphics) override
+\begin{DoxyCompactList}\small\item\em Overrides the method allowing the label to draw itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a label displaying a static text. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_label_af8f2bccf9faadcb2ca964bd2347dde24}\label{class_label_af8f2bccf9faadcb2ca964bd2347dde24}} 
+\index{Label@{Label}!Label@{Label}}
+\index{Label@{Label}!Label@{Label}}
+\subsubsection{\texorpdfstring{Label()}{Label()}}
+{\footnotesize\ttfamily Label\+::\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Instantiates a new \mbox{\hyperlink{class_label}{Label}} object. 
+
+\mbox{\Hypertarget{class_label_a21f4dd9aa297a03f641dd689ea291e2b}\label{class_label_a21f4dd9aa297a03f641dd689ea291e2b}} 
+\index{Label@{Label}!````~Label@{$\sim$Label}}
+\index{````~Label@{$\sim$Label}!Label@{Label}}
+\subsubsection{\texorpdfstring{$\sim$Label()}{~Label()}}
+{\footnotesize\ttfamily virtual Label\+::$\sim$\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the label. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_label_a5306a233501af781095f08e95ebcfb23}\label{class_label_a5306a233501af781095f08e95ebcfb23}} 
+\index{Label@{Label}!getText@{getText}}
+\index{getText@{getText}!Label@{Label}}
+\subsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily std\+::string Label\+::get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the displayed text of the label. 
+
+\mbox{\Hypertarget{class_label_a81c445ff99fbdfa3ca662783568adda8}\label{class_label_a81c445ff99fbdfa3ca662783568adda8}} 
+\index{Label@{Label}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Label@{Label}}
+\subsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int Label\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the width of the label. 
+
+\mbox{\Hypertarget{class_label_ac418a8328a971f5da7f46c9c6e9fd7e5}\label{class_label_ac418a8328a971f5da7f46c9c6e9fd7e5}} 
+\index{Label@{Label}!onDraw@{onDraw}}
+\index{onDraw@{onDraw}!Label@{Label}}
+\subsubsection{\texorpdfstring{onDraw()}{onDraw()}}
+{\footnotesize\ttfamily void Label\+::on\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \&}]{graphics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method allowing the label to draw itself. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics} & The graphics used to draw the label\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_control_a5f89270d0d05a6bac9128db0b1d290d2}{Control}}.
+
+\mbox{\Hypertarget{class_label_ac97689cc2fa667ef92da9904b1679fd5}\label{class_label_ac97689cc2fa667ef92da9904b1679fd5}} 
+\index{Label@{Label}!setHeight@{setHeight}}
+\index{setHeight@{setHeight}!Label@{Label}}
+\subsubsection{\texorpdfstring{setHeight()}{setHeight()}}
+{\footnotesize\ttfamily void Label\+::set\+Height (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the height of the label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The height set.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_label_a8b4c56829c676960e9bb9000eaa83963}\label{class_label_a8b4c56829c676960e9bb9000eaa83963}} 
+\index{Label@{Label}!setStyle@{setStyle}}
+\index{setStyle@{setStyle}!Label@{Label}}
+\subsubsection{\texorpdfstring{setStyle()}{setStyle()}}
+{\footnotesize\ttfamily void Label\+::set\+Style (\begin{DoxyParamCaption}\item[{Console\+Style}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the style for the label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The style to set.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_label_a6bc9eefce325e64edb7d1aca939093fb}\label{class_label_a6bc9eefce325e64edb7d1aca939093fb}} 
+\index{Label@{Label}!setText@{setText}}
+\index{setText@{setText}!Label@{Label}}
+\subsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily void Label\+::set\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{text }\end{DoxyParamCaption})}
+
+
+
+Sets the displayed text of the label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text to set.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_label_a11354abcef74d29dca59ee029521d04b}\label{class_label_a11354abcef74d29dca59ee029521d04b}} 
+\index{Label@{Label}!setWidth@{setWidth}}
+\index{setWidth@{setWidth}!Label@{Label}}
+\subsubsection{\texorpdfstring{setWidth()}{setWidth()}}
+{\footnotesize\ttfamily void Label\+::set\+Width (\begin{DoxyParamCaption}\item[{int}]{width }\end{DoxyParamCaption})}
+
+
+
+Sets the width of the label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width to set.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Label.\+h\item 
+Label.\+cpp\end{DoxyCompactItemize}

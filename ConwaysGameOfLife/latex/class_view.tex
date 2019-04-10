@@ -1,0 +1,242 @@
+\hypertarget{class_view}{}\section{View Class Reference}
+\label{class_view}\index{View@{View}}
+
+
+Represents a base of all views.  
+
+
+
+
+{\ttfamily \#include $<$View.\+h$>$}
+
+Inheritance diagram for View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.904762cm]{class_view}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_view_a73446be92068b1fb7a4ccc29445d379f}{$\sim$\+View}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the view. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmath_1_1_size}{math\+::\+Size}} \mbox{\hyperlink{class_view_aa134891eb68e40d94fdd0c074750edcb}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the view. \end{DoxyCompactList}\item 
+View\+Result \mbox{\hyperlink{class_view_a12b635ae31cb79f1f907e41e41bad74d}{get\+Result}} () const
+\begin{DoxyCompactList}\small\item\em Gets the result of the view. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_control}{Control}} $>$ \mbox{\hyperlink{class_view_ab5987bd0e07a48ff5f9033c6db76bc1f}{get\+Focused\+Control}} () const
+\begin{DoxyCompactList}\small\item\em Gets the currently focused control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_application}{Application}} $>$ \mbox{\hyperlink{class_view_ad902fbd5ece1dd9e02e05ce473f90712}{get\+Application}} () const
+\begin{DoxyCompactList}\small\item\em Gets the application associated with the view. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_view_afd9ac571a451efbab5ffa0a04bbef450}{is\+Non\+Blocking}} () const
+\begin{DoxyCompactList}\small\item\em Gets the value indicating if the view is in non blocking mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_ab8e4d49df156b9a22023f7992b2b9d75}{set\+Non\+Blocking}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the value indicating if the view is in non blocking mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_a5a029fe19172989524b1ad6e02695374}{focus}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_control}{Control}} $>$ \&control)
+\begin{DoxyCompactList}\small\item\em Focuses the specified control. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_view_a334fa9a19d2faca0120ef2869c3dd8ad}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the view. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_view_aee97523bb9aaf26c1d09528e4f6911b7}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_ab391ca9800c413c543be7f2f6b9716d2}{on\+Key\+Press}} (char key) override
+\begin{DoxyCompactList}\small\item\em Overrides the method allowing for changing currently focused control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_ae78c9a069c50811e0bd5e61dbf5f4f6c}{on\+Resize}} ()
+\begin{DoxyCompactList}\small\item\em Occurs when view is resized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_view_af3d74bdf8b9775db106108e5bbf8c051}{set\+Result}} (View\+Result result)
+\begin{DoxyCompactList}\small\item\em Sets the result of the view. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_view_a44ad60a768422d3fa8fbd7576950080a}{View}} ()
+\begin{DoxyCompactList}\small\item\em Instantiates a new \mbox{\hyperlink{class_view}{View}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_view_a23f25bcc02a0e94c2f5a4188496b04d0}\label{class_view_a23f25bcc02a0e94c2f5a4188496b04d0}} 
+class {\bfseries Application}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a base of all views. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_view_a44ad60a768422d3fa8fbd7576950080a}\label{class_view_a44ad60a768422d3fa8fbd7576950080a}} 
+\index{View@{View}!View@{View}}
+\index{View@{View}!View@{View}}
+\subsubsection{\texorpdfstring{View()}{View()}}
+{\footnotesize\ttfamily View\+::\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Instantiates a new \mbox{\hyperlink{class_view}{View}} object. 
+
+\mbox{\Hypertarget{class_view_a73446be92068b1fb7a4ccc29445d379f}\label{class_view_a73446be92068b1fb7a4ccc29445d379f}} 
+\index{View@{View}!````~View@{$\sim$View}}
+\index{````~View@{$\sim$View}!View@{View}}
+\subsubsection{\texorpdfstring{$\sim$View()}{~View()}}
+{\footnotesize\ttfamily virtual View\+::$\sim$\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the view. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_view_a5a029fe19172989524b1ad6e02695374}\label{class_view_a5a029fe19172989524b1ad6e02695374}} 
+\index{View@{View}!focus@{focus}}
+\index{focus@{focus}!View@{View}}
+\subsubsection{\texorpdfstring{focus()}{focus()}}
+{\footnotesize\ttfamily void View\+::focus (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_control}{Control}} $>$ \&}]{control }\end{DoxyParamCaption})}
+
+
+
+Focuses the specified control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control} & The control to focus.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_ad902fbd5ece1dd9e02e05ce473f90712}\label{class_view_ad902fbd5ece1dd9e02e05ce473f90712}} 
+\index{View@{View}!getApplication@{getApplication}}
+\index{getApplication@{getApplication}!View@{View}}
+\subsubsection{\texorpdfstring{getApplication()}{getApplication()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_application}{Application}} $>$ View\+::get\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the application associated with the view. 
+
+\mbox{\Hypertarget{class_view_ab5987bd0e07a48ff5f9033c6db76bc1f}\label{class_view_ab5987bd0e07a48ff5f9033c6db76bc1f}} 
+\index{View@{View}!getFocusedControl@{getFocusedControl}}
+\index{getFocusedControl@{getFocusedControl}!View@{View}}
+\subsubsection{\texorpdfstring{getFocusedControl()}{getFocusedControl()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_control}{Control}} $>$ View\+::get\+Focused\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the currently focused control. 
+
+\mbox{\Hypertarget{class_view_a12b635ae31cb79f1f907e41e41bad74d}\label{class_view_a12b635ae31cb79f1f907e41e41bad74d}} 
+\index{View@{View}!getResult@{getResult}}
+\index{getResult@{getResult}!View@{View}}
+\subsubsection{\texorpdfstring{getResult()}{getResult()}}
+{\footnotesize\ttfamily View\+Result View\+::get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the result of the view. 
+
+\mbox{\Hypertarget{class_view_aa134891eb68e40d94fdd0c074750edcb}\label{class_view_aa134891eb68e40d94fdd0c074750edcb}} 
+\index{View@{View}!getSize@{getSize}}
+\index{getSize@{getSize}!View@{View}}
+\subsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmath_1_1_size}{math\+::\+Size}} View\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the size of the view. 
+
+\mbox{\Hypertarget{class_view_a334fa9a19d2faca0120ef2869c3dd8ad}\label{class_view_a334fa9a19d2faca0120ef2869c3dd8ad}} 
+\index{View@{View}!initialize@{initialize}}
+\index{initialize@{initialize}!View@{View}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void View\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the view. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_simulation_view_ad54da8596a97ae64ecf71b05038587fc}{Simulation\+View}}, \mbox{\hyperlink{class_choose_file_view_a16e0c6bdcb247f7b792934c4d7901db5}{Choose\+File\+View}}, \mbox{\hyperlink{class_options_view_a0b35f3f0d318997b9600f1da91d58916}{Options\+View}}, \mbox{\hyperlink{class_simulation_menu_view_a6fe8f1da6cfa590491c735f6b41b6d87}{Simulation\+Menu\+View}}, \mbox{\hyperlink{class_menu_view_afeb1445373870a755eea4fe036351ba4}{Menu\+View}}, and \mbox{\hyperlink{class_message_view_a869de4a6b084eb205184de7f524160e2}{Message\+View}}.
+
+\mbox{\Hypertarget{class_view_afd9ac571a451efbab5ffa0a04bbef450}\label{class_view_afd9ac571a451efbab5ffa0a04bbef450}} 
+\index{View@{View}!isNonBlocking@{isNonBlocking}}
+\index{isNonBlocking@{isNonBlocking}!View@{View}}
+\subsubsection{\texorpdfstring{isNonBlocking()}{isNonBlocking()}}
+{\footnotesize\ttfamily bool View\+::is\+Non\+Blocking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the value indicating if the view is in non blocking mode. 
+
+\mbox{\Hypertarget{class_view_ab391ca9800c413c543be7f2f6b9716d2}\label{class_view_ab391ca9800c413c543be7f2f6b9716d2}} 
+\index{View@{View}!onKeyPress@{onKeyPress}}
+\index{onKeyPress@{onKeyPress}!View@{View}}
+\subsubsection{\texorpdfstring{onKeyPress()}{onKeyPress()}}
+{\footnotesize\ttfamily void View\+::on\+Key\+Press (\begin{DoxyParamCaption}\item[{char}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method allowing for changing currently focused control. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_control_a4731a62a9ea0510d51924509ae74c93e}{Control}}.
+
+\mbox{\Hypertarget{class_view_ae78c9a069c50811e0bd5e61dbf5f4f6c}\label{class_view_ae78c9a069c50811e0bd5e61dbf5f4f6c}} 
+\index{View@{View}!onResize@{onResize}}
+\index{onResize@{onResize}!View@{View}}
+\subsubsection{\texorpdfstring{onResize()}{onResize()}}
+{\footnotesize\ttfamily void View\+::on\+Resize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Occurs when view is resized. 
+
+\mbox{\Hypertarget{class_view_ab8e4d49df156b9a22023f7992b2b9d75}\label{class_view_ab8e4d49df156b9a22023f7992b2b9d75}} 
+\index{View@{View}!setNonBlocking@{setNonBlocking}}
+\index{setNonBlocking@{setNonBlocking}!View@{View}}
+\subsubsection{\texorpdfstring{setNonBlocking()}{setNonBlocking()}}
+{\footnotesize\ttfamily void View\+::set\+Non\+Blocking (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the value indicating if the view is in non blocking mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_af3d74bdf8b9775db106108e5bbf8c051}\label{class_view_af3d74bdf8b9775db106108e5bbf8c051}} 
+\index{View@{View}!setResult@{setResult}}
+\index{setResult@{setResult}!View@{View}}
+\subsubsection{\texorpdfstring{setResult()}{setResult()}}
+{\footnotesize\ttfamily void View\+::set\+Result (\begin{DoxyParamCaption}\item[{View\+Result}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets the result of the view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & The result to set\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_aee97523bb9aaf26c1d09528e4f6911b7}\label{class_view_aee97523bb9aaf26c1d09528e4f6911b7}} 
+\index{View@{View}!update@{update}}
+\index{update@{update}!View@{View}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void View\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Updates the view. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_simulation_view_a6e28ca1ab7e2805561d4c3ec9e6c7d7c}{Simulation\+View}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+View.\+h\item 
+View.\+cpp\end{DoxyCompactItemize}

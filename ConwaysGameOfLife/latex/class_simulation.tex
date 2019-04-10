@@ -1,0 +1,220 @@
+\hypertarget{class_simulation}{}\section{Simulation Class Reference}
+\label{class_simulation}\index{Simulation@{Simulation}}
+
+
+Represents the game of life simulation.  
+
+
+
+
+{\ttfamily \#include $<$Simulation.\+h$>$}
+
+Inheritance diagram for Simulation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_simulation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_simulation_a5b224cc5b36bcc8eb29689aff223de41}{Simulation}} ()
+\begin{DoxyCompactList}\small\item\em Instantiates a new \mbox{\hyperlink{class_simulation}{Simulation}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_simulation_a70bcf076c771e7f87accb5194a29c2de}{$\sim$\+Simulation}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the simulation. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_simulation_a3e8280ed7e9e198b1cd0e971f203d735}{get\+Cell}} (int32\+\_\+t x, int32\+\_\+t y) const
+\begin{DoxyCompactList}\small\item\em Gets the cell value at given coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_a8e46c18b9c2d57bf10f639aa676bb936}{set\+Cell}} (int32\+\_\+t x, int32\+\_\+t y, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the cell value at given coordinates. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_simulation_a407aec90b481c057000ac432594eb4f9}{get\+Grid\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Gets the grid width. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_simulation_a30517d33e61a6b54515de81cdcc4039f}{get\+Grid\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Gets the grid height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_ab5f84974ddbb9113f385d7bc03f794ed}{set\+Seamless}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the value indicating if the grid is seamless. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{class_simulation_a73e3f1767b8503fa4d0608ec49e797bd}{get\+Alive\+Cell\+Count}} ()
+\begin{DoxyCompactList}\small\item\em Gets the count of the alive cells. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_ab07da37d80b50e6d52ae0697746f3afa}{initialize\+Grid}} (int32\+\_\+t width, int32\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Initializes the grid using given dimensions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_a05f768b6836615170f1c43c6c0787fe8}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the simulation by one step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_simulation_a2dc2464162d59383e0a1c68a3f9c42fb}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_simulation_abcacd825d905eb8ff9b2cad4fdf76bdd}{is\+Alive}} (int32\+\_\+t x, int32\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Checks if the cell at given coordinates is alive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents the game of life simulation. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_simulation_a5b224cc5b36bcc8eb29689aff223de41}\label{class_simulation_a5b224cc5b36bcc8eb29689aff223de41}} 
+\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{Simulation()}{Simulation()}}
+{\footnotesize\ttfamily Simulation\+::\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Instantiates a new \mbox{\hyperlink{class_simulation}{Simulation}} object. 
+
+\mbox{\Hypertarget{class_simulation_a70bcf076c771e7f87accb5194a29c2de}\label{class_simulation_a70bcf076c771e7f87accb5194a29c2de}} 
+\index{Simulation@{Simulation}!````~Simulation@{$\sim$Simulation}}
+\index{````~Simulation@{$\sim$Simulation}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{$\sim$Simulation()}{~Simulation()}}
+{\footnotesize\ttfamily Simulation\+::$\sim$\+Simulation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the simulation. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_simulation_a73e3f1767b8503fa4d0608ec49e797bd}\label{class_simulation_a73e3f1767b8503fa4d0608ec49e797bd}} 
+\index{Simulation@{Simulation}!getAliveCellCount@{getAliveCellCount}}
+\index{getAliveCellCount@{getAliveCellCount}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{getAliveCellCount()}{getAliveCellCount()}}
+{\footnotesize\ttfamily int32\+\_\+t Simulation\+::get\+Alive\+Cell\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the count of the alive cells. 
+
+\mbox{\Hypertarget{class_simulation_a3e8280ed7e9e198b1cd0e971f203d735}\label{class_simulation_a3e8280ed7e9e198b1cd0e971f203d735}} 
+\index{Simulation@{Simulation}!getCell@{getCell}}
+\index{getCell@{getCell}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{getCell()}{getCell()}}
+{\footnotesize\ttfamily uint8\+\_\+t Simulation\+::get\+Cell (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{x,  }\item[{int32\+\_\+t}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the cell value at given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the cell.\\
+\hline
+{\em y} & The y coordinate of the cell.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_a30517d33e61a6b54515de81cdcc4039f}\label{class_simulation_a30517d33e61a6b54515de81cdcc4039f}} 
+\index{Simulation@{Simulation}!getGridHeight@{getGridHeight}}
+\index{getGridHeight@{getGridHeight}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{getGridHeight()}{getGridHeight()}}
+{\footnotesize\ttfamily int32\+\_\+t Simulation\+::get\+Grid\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the grid height. 
+
+\mbox{\Hypertarget{class_simulation_a407aec90b481c057000ac432594eb4f9}\label{class_simulation_a407aec90b481c057000ac432594eb4f9}} 
+\index{Simulation@{Simulation}!getGridWidth@{getGridWidth}}
+\index{getGridWidth@{getGridWidth}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{getGridWidth()}{getGridWidth()}}
+{\footnotesize\ttfamily int32\+\_\+t Simulation\+::get\+Grid\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the grid width. 
+
+\mbox{\Hypertarget{class_simulation_ab07da37d80b50e6d52ae0697746f3afa}\label{class_simulation_ab07da37d80b50e6d52ae0697746f3afa}} 
+\index{Simulation@{Simulation}!initializeGrid@{initializeGrid}}
+\index{initializeGrid@{initializeGrid}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{initializeGrid()}{initializeGrid()}}
+{\footnotesize\ttfamily void Simulation\+::initialize\+Grid (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{width,  }\item[{int32\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+Initializes the grid using given dimensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The new width of the grid.\\
+\hline
+{\em height} & The new height of the grid.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_abcacd825d905eb8ff9b2cad4fdf76bdd}\label{class_simulation_abcacd825d905eb8ff9b2cad4fdf76bdd}} 
+\index{Simulation@{Simulation}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{isAlive()}{isAlive()}}
+{\footnotesize\ttfamily bool Simulation\+::is\+Alive (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{x,  }\item[{int32\+\_\+t}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the cell at given coordinates is alive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the cell.\\
+\hline
+{\em y} & The y coordinate of the cell.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_a2dc2464162d59383e0a1c68a3f9c42fb}\label{class_simulation_a2dc2464162d59383e0a1c68a3f9c42fb}} 
+\index{Simulation@{Simulation}!reset@{reset}}
+\index{reset@{reset}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Simulation\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the simulation. 
+
+\mbox{\Hypertarget{class_simulation_a8e46c18b9c2d57bf10f639aa676bb936}\label{class_simulation_a8e46c18b9c2d57bf10f639aa676bb936}} 
+\index{Simulation@{Simulation}!setCell@{setCell}}
+\index{setCell@{setCell}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{setCell()}{setCell()}}
+{\footnotesize\ttfamily void Simulation\+::set\+Cell (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{x,  }\item[{int32\+\_\+t}]{y,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the cell value at given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate of the cell.\\
+\hline
+{\em y} & The y coordinate of the cell.\\
+\hline
+{\em value} & The cell value to set.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_ab5f84974ddbb9113f385d7bc03f794ed}\label{class_simulation_ab5f84974ddbb9113f385d7bc03f794ed}} 
+\index{Simulation@{Simulation}!setSeamless@{setSeamless}}
+\index{setSeamless@{setSeamless}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{setSeamless()}{setSeamless()}}
+{\footnotesize\ttfamily void Simulation\+::set\+Seamless (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the value indicating if the grid is seamless. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_simulation_a05f768b6836615170f1c43c6c0787fe8}\label{class_simulation_a05f768b6836615170f1c43c6c0787fe8}} 
+\index{Simulation@{Simulation}!update@{update}}
+\index{update@{update}!Simulation@{Simulation}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Simulation\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the simulation by one step. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Simulation.\+h\item 
+Simulation.\+cpp\end{DoxyCompactItemize}

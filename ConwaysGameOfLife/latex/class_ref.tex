@@ -1,0 +1,343 @@
+\hypertarget{class_ref}{}\section{Ref$<$ T\+Type $>$ Class Template Reference}
+\label{class_ref}\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+
+
+Represents the basic strong reference to any \mbox{\hyperlink{class_object}{Object}}. This reference will block the object from being destroyed.  
+
+
+
+
+{\ttfamily \#include $<$Ref.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ref_a73f8a459509492ff5281240d2eefb2d5}{Ref}} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty reference. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ref_a51a02585d57ba2d0fd2066372ed422c8}{$\sim$\+Ref}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the reference. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ref_a235b1cec9594a29c7d4c6b58e92bc602}{Ref}} (T $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Creates an reference to the object pointer. Takes the authority of the specified pointer which means after creation the pointer must no longer be used for other operations. Used to easly create references to object from new keyword. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ref_ace2c482df7f5bc1b71cf36e962f0fd0a}{Ref}} (const std\+::shared\+\_\+ptr$<$ T $>$ \&ptr)
+\begin{DoxyCompactList}\small\item\em Creates a reference from the shared\+\_\+ptr. Allows to convert shared\+\_\+ptr to references. Used mainly in convienient conversions from shared\+\_\+ptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ref_af5a5311e5afb91b98e20c5d96c3ae31b}{Ref}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Creates a reference by copying the value from the other reference. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename  = std\+::enable\+\_\+if$<$std\+::is\+\_\+const$<$\+T$>$\+::value$>$$>$ }\\\mbox{\hyperlink{class_ref_a0ff7c9e8c09bd700086040b8b6f89a35}{Ref}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ std\+::remove\+\_\+const\+\_\+t$<$ T $>$$>$ \&other)
+\begin{DoxyCompactList}\small\item\em Allows for converting \mbox{\hyperlink{class_ref}{Ref}}$<$T$>$ to \mbox{\hyperlink{class_ref}{Ref}}$<$const T$>$ implicitly. Only enabled if current class contains const T type parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ref_a56886343e7faf21e18bec16042535cf5}{Ref}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ \&\&other)
+\begin{DoxyCompactList}\small\item\em Allows for moving the reference. Makes returning refernces creating less copies of the shared pointers. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ \& \mbox{\hyperlink{class_ref_aaf07d54c8951e7f026faef51950c18a6}{operator=}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Allows for copying the reference using the assign operator. \end{DoxyCompactList}\item 
+T $\ast$ \mbox{\hyperlink{class_ref_a8a8746320aa81f63d923172305b8d173}{operator-\/$>$}} () const
+\begin{DoxyCompactList}\small\item\em Allows for fast access to the T object members. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::negation$<$std\+::is\+\_\+same$<$\+T, Object$>$$>$\+::value$>$$>$ }\\bool \mbox{\hyperlink{class_ref_aab8b77f0e2128c4c373909703e14df5d}{operator==}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ const T $>$ \&right) const
+\begin{DoxyCompactList}\small\item\em Compares current reference to other const one. Enabled only if compared reference is not reference to object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::negation$<$std\+::is\+\_\+const$<$\+T$>$$>$\+::value$>$$>$ }\\bool \mbox{\hyperlink{class_ref_a27a33c7a0fb318d86cbe5bf5ec206bd5}{operator==}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ std\+::remove\+\_\+const\+\_\+t$<$ T $>$$>$ \&right) const
+\begin{DoxyCompactList}\small\item\em Compares current reference to other non const reference. Enabled only if compared reference is not const reference. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ref_ac33d6085174ef867bb4cea065a432ff5}{operator==}} (const T $\ast$right) const
+\begin{DoxyCompactList}\small\item\em Cehcks if the current reference is referencing the same object as the specified pointer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ref_a8970ca9149b48f6c77527f38c2a5e054}{operator!=}} (const T $\ast$right) const
+\begin{DoxyCompactList}\small\item\em Cehcks if the current reference is not referencing the same object as the specified pointer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ref_aed42f0368b0f72de67c391a731392154}{operator!}} () const
+\begin{DoxyCompactList}\small\item\em Checks if current reference is an empty one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T2 , typename  = std\+::enable\+\_\+if\+\_\+t$<$(std\+::is\+\_\+assignable$<$\+T2\&, T\&$>$\+::value $\vert$$\vert$ std\+::is\+\_\+assignable$<$\+T\&, T2\&$>$\+::value)$>$$>$ }\\\mbox{\hyperlink{class_ref_a74bedcfebf713236ee66a5c1e06cbfec}{operator Ref$<$ T2 $>$}} () const
+\begin{DoxyCompactList}\small\item\em Allows for explicit casting from the one reference to another. Enabled only if the type to which the reference is casted is assignable from current type and vice versa. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T2 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+assignable$<$\+T2\&, T\&$>$\+::value$>$$>$ }\\\mbox{\hyperlink{class_ref_a092daaa0d297f615642fc4870cff4f47}{operator Ref$<$ T2 $>$}} ()
+\begin{DoxyCompactList}\small\item\em Allows for implicit casting from the one reference to another. Enabled only if the type to which the reference is casted is assignable from current type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ref_a1feffacefd6a3f6e42a362e0669264ee}{operator bool}} () const
+\begin{DoxyCompactList}\small\item\em Checks if current reference is not an empty one. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T2 $>$ }\\\mbox{\hyperlink{class_ref}{Ref}}$<$ T2 $>$ \mbox{\hyperlink{class_ref_a3debb396d13901075faf5bd1663ae9c6}{as}} () const
+\begin{DoxyCompactList}\small\item\em Performs dynamic cast to the specified type. If current refernce is not assignable to the specified type then empty reference is returned. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T2 , typename  = std\+::enable\+\_\+if\+\_\+t$<$(std\+::is\+\_\+assignable$<$\+T2\&, T\&$>$\+::value $\vert$$\vert$ std\+::is\+\_\+assignable$<$\+T\&, T2\&$>$\+::value)$>$$>$ }\\\mbox{\hyperlink{class_ref}{Ref}}$<$ T2 $>$ \mbox{\hyperlink{class_ref_a616580cb90ccb7611dcc3b2c1d15130d}{cast}} () const
+\begin{DoxyCompactList}\small\item\em Performs static cast to the specified type. Enabled only if the type to which the reference is casted is assignable from current type and vice versa. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T2 $>$ }\\bool \mbox{\hyperlink{class_ref_a1f1c08e3689380efc4471e109dafce28}{is}} () const
+\begin{DoxyCompactList}\small\item\em Performs dynamic type check. If current refernce is not assignable to the specified type then false is returned. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+array\+\_\+v$<$\+T\+Type$>$$>$$>$ }\\T \& \mbox{\hyperlink{class_ref_af44580a655b72ebbae930b3056f85277}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Allows for easy access to the array elements when T\+Type is an array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_ref_a0dff788348708e8d176d3154d15f4e3a}{reference\+Equals}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ const T $>$ \&first, const \mbox{\hyperlink{class_ref}{Ref}}$<$ const T $>$ \&second)
+\begin{DoxyCompactList}\small\item\em Checks if two references of the same types are equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ref_a872a328b30cc36b030fb5830488fe2e5}\label{class_ref_a872a328b30cc36b030fb5830488fe2e5}} 
+class {\bfseries Ref$<$ std\+::remove\+\_\+const\+\_\+t$<$ T $>$ $>$}
+\item 
+\mbox{\Hypertarget{class_ref_a643f2206cd45ca251329b8cd0a229661}\label{class_ref_a643f2206cd45ca251329b8cd0a229661}} 
+class {\bfseries Ref$<$ std\+::add\+\_\+const\+\_\+t$<$ T $>$ $>$}
+\item 
+\mbox{\Hypertarget{class_ref_a41dafcb9b25b84e93a71f6792a5192bd}\label{class_ref_a41dafcb9b25b84e93a71f6792a5192bd}} 
+class {\bfseries Weak\+Ref$<$ T $>$}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T\+Type$>$\newline
+class Ref$<$ T\+Type $>$}
+
+Represents the basic strong reference to any \mbox{\hyperlink{class_object}{Object}}. This reference will block the object from being destroyed. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ref_a73f8a459509492ff5281240d2eefb2d5}\label{class_ref_a73f8a459509492ff5281240d2eefb2d5}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!Ref@{Ref}}
+\index{Ref@{Ref}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{Ref()}{Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::\mbox{\hyperlink{class_ref}{Ref}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an empty reference. 
+
+\mbox{\Hypertarget{class_ref_a51a02585d57ba2d0fd2066372ed422c8}\label{class_ref_a51a02585d57ba2d0fd2066372ed422c8}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!````~Ref@{$\sim$Ref}}
+\index{````~Ref@{$\sim$Ref}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{$\sim$Ref()}{~Ref()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::$\sim$\mbox{\hyperlink{class_ref}{Ref}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroys the reference. 
+
+\mbox{\Hypertarget{class_ref_a235b1cec9594a29c7d4c6b58e92bc602}\label{class_ref_a235b1cec9594a29c7d4c6b58e92bc602}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!Ref@{Ref}}
+\index{Ref@{Ref}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{Ref()}{Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::\mbox{\hyperlink{class_ref}{Ref}} (\begin{DoxyParamCaption}\item[{T $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an reference to the object pointer. Takes the authority of the specified pointer which means after creation the pointer must no longer be used for other operations. Used to easly create references to object from new keyword. 
+
+\mbox{\Hypertarget{class_ref_ace2c482df7f5bc1b71cf36e962f0fd0a}\label{class_ref_ace2c482df7f5bc1b71cf36e962f0fd0a}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!Ref@{Ref}}
+\index{Ref@{Ref}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{Ref()}{Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::\mbox{\hyperlink{class_ref}{Ref}} (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ T $>$ \&}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a reference from the shared\+\_\+ptr. Allows to convert shared\+\_\+ptr to references. Used mainly in convienient conversions from shared\+\_\+ptr. 
+
+\mbox{\Hypertarget{class_ref_af5a5311e5afb91b98e20c5d96c3ae31b}\label{class_ref_af5a5311e5afb91b98e20c5d96c3ae31b}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!Ref@{Ref}}
+\index{Ref@{Ref}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{Ref()}{Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::\mbox{\hyperlink{class_ref}{Ref}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a reference by copying the value from the other reference. 
+
+\mbox{\Hypertarget{class_ref_a0ff7c9e8c09bd700086040b8b6f89a35}\label{class_ref_a0ff7c9e8c09bd700086040b8b6f89a35}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!Ref@{Ref}}
+\index{Ref@{Ref}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{Ref()}{Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+template$<$typename  = std\+::enable\+\_\+if$<$std\+::is\+\_\+const$<$\+T$>$\+::value$>$$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::\mbox{\hyperlink{class_ref}{Ref}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ std\+::remove\+\_\+const\+\_\+t$<$ T $>$$>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows for converting \mbox{\hyperlink{class_ref}{Ref}}$<$T$>$ to \mbox{\hyperlink{class_ref}{Ref}}$<$const T$>$ implicitly. Only enabled if current class contains const T type parameter. 
+
+\mbox{\Hypertarget{class_ref_a56886343e7faf21e18bec16042535cf5}\label{class_ref_a56886343e7faf21e18bec16042535cf5}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!Ref@{Ref}}
+\index{Ref@{Ref}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{Ref()}{Ref()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::\mbox{\hyperlink{class_ref}{Ref}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows for moving the reference. Makes returning refernces creating less copies of the shared pointers. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ref_a3debb396d13901075faf5bd1663ae9c6}\label{class_ref_a3debb396d13901075faf5bd1663ae9c6}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!as@{as}}
+\index{as@{as}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{as()}{as()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+template$<$typename T2 $>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$T2$>$ \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::as (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs dynamic cast to the specified type. If current refernce is not assignable to the specified type then empty reference is returned. 
+
+\mbox{\Hypertarget{class_ref_a616580cb90ccb7611dcc3b2c1d15130d}\label{class_ref_a616580cb90ccb7611dcc3b2c1d15130d}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!cast@{cast}}
+\index{cast@{cast}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{cast()}{cast()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+template$<$typename T2 , typename  = std\+::enable\+\_\+if\+\_\+t$<$(std\+::is\+\_\+assignable$<$\+T2\&, T\&$>$\+::value $\vert$$\vert$ std\+::is\+\_\+assignable$<$\+T\&, T2\&$>$\+::value)$>$$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$T2$>$ \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::cast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs static cast to the specified type. Enabled only if the type to which the reference is casted is assignable from current type and vice versa. 
+
+\mbox{\Hypertarget{class_ref_a1f1c08e3689380efc4471e109dafce28}\label{class_ref_a1f1c08e3689380efc4471e109dafce28}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!is@{is}}
+\index{is@{is}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{is()}{is()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+template$<$typename T2 $>$ \\
+bool \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs dynamic type check. If current refernce is not assignable to the specified type then false is returned. 
+
+\mbox{\Hypertarget{class_ref_a1feffacefd6a3f6e42a362e0669264ee}\label{class_ref_a1feffacefd6a3f6e42a362e0669264ee}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if current reference is not an empty one. 
+
+\mbox{\Hypertarget{class_ref_a74bedcfebf713236ee66a5c1e06cbfec}\label{class_ref_a74bedcfebf713236ee66a5c1e06cbfec}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator Ref$<$ T2 $>$@{operator Ref$<$ T2 $>$}}
+\index{operator Ref$<$ T2 $>$@{operator Ref$<$ T2 $>$}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator Ref$<$ T2 $>$()}{operator Ref< T2 >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+template$<$typename T2 , typename  = std\+::enable\+\_\+if\+\_\+t$<$(std\+::is\+\_\+assignable$<$\+T2\&, T\&$>$\+::value $\vert$$\vert$ std\+::is\+\_\+assignable$<$\+T\&, T2\&$>$\+::value)$>$$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator \mbox{\hyperlink{class_ref}{Ref}}$<$ T2 $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Allows for explicit casting from the one reference to another. Enabled only if the type to which the reference is casted is assignable from current type and vice versa. 
+
+\mbox{\Hypertarget{class_ref_a092daaa0d297f615642fc4870cff4f47}\label{class_ref_a092daaa0d297f615642fc4870cff4f47}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator Ref$<$ T2 $>$@{operator Ref$<$ T2 $>$}}
+\index{operator Ref$<$ T2 $>$@{operator Ref$<$ T2 $>$}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator Ref$<$ T2 $>$()}{operator Ref< T2 >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+template$<$typename T2 , typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+assignable$<$\+T2\&, T\&$>$\+::value$>$$>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator \mbox{\hyperlink{class_ref}{Ref}}$<$ T2 $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows for implicit casting from the one reference to another. Enabled only if the type to which the reference is casted is assignable from current type. 
+
+\mbox{\Hypertarget{class_ref_aed42f0368b0f72de67c391a731392154}\label{class_ref_aed42f0368b0f72de67c391a731392154}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+bool \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator! (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if current reference is an empty one. 
+
+\mbox{\Hypertarget{class_ref_a8970ca9149b48f6c77527f38c2a5e054}\label{class_ref_a8970ca9149b48f6c77527f38c2a5e054}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+bool \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::\mbox{\hyperlink{class_ref_aed42f0368b0f72de67c391a731392154}{operator!}}= (\begin{DoxyParamCaption}\item[{const T $\ast$}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cehcks if the current reference is not referencing the same object as the specified pointer. 
+
+\mbox{\Hypertarget{class_ref_a8a8746320aa81f63d923172305b8d173}\label{class_ref_a8a8746320aa81f63d923172305b8d173}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+T$\ast$ \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows for fast access to the T object members. 
+
+\mbox{\Hypertarget{class_ref_aaf07d54c8951e7f026faef51950c18a6}\label{class_ref_aaf07d54c8951e7f026faef51950c18a6}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+const \mbox{\hyperlink{class_ref}{Ref}}$<$T$>$\& \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows for copying the reference using the assign operator. 
+
+\mbox{\Hypertarget{class_ref_aab8b77f0e2128c4c373909703e14df5d}\label{class_ref_aab8b77f0e2128c4c373909703e14df5d}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+template$<$typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::negation$<$std\+::is\+\_\+same$<$\+T, Object$>$$>$\+::value$>$$>$ \\
+bool \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ const T $>$ \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares current reference to other const one. Enabled only if compared reference is not reference to object. 
+
+\mbox{\Hypertarget{class_ref_a27a33c7a0fb318d86cbe5bf5ec206bd5}\label{class_ref_a27a33c7a0fb318d86cbe5bf5ec206bd5}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+template$<$typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::negation$<$std\+::is\+\_\+const$<$\+T$>$$>$\+::value$>$$>$ \\
+bool \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ std\+::remove\+\_\+const\+\_\+t$<$ T $>$$>$ \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares current reference to other non const reference. Enabled only if compared reference is not const reference. 
+
+\mbox{\Hypertarget{class_ref_ac33d6085174ef867bb4cea065a432ff5}\label{class_ref_ac33d6085174ef867bb4cea065a432ff5}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+bool \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{const T $\ast$}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cehcks if the current reference is referencing the same object as the specified pointer. 
+
+\mbox{\Hypertarget{class_ref_af44580a655b72ebbae930b3056f85277}\label{class_ref_af44580a655b72ebbae930b3056f85277}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+template$<$typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+array\+\_\+v$<$\+T\+Type$>$$>$$>$ \\
+T\& \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows for easy access to the array elements when T\+Type is an array. 
+
+\mbox{\Hypertarget{class_ref_a0dff788348708e8d176d3154d15f4e3a}\label{class_ref_a0dff788348708e8d176d3154d15f4e3a}} 
+\index{Ref$<$ TType $>$@{Ref$<$ TType $>$}!referenceEquals@{referenceEquals}}
+\index{referenceEquals@{referenceEquals}!Ref$<$ TType $>$@{Ref$<$ TType $>$}}
+\subsubsection{\texorpdfstring{referenceEquals()}{referenceEquals()}}
+{\footnotesize\ttfamily template$<$typename T\+Type$>$ \\
+static bool \mbox{\hyperlink{class_ref}{Ref}}$<$ T\+Type $>$\+::reference\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ const T $>$ \&}]{first,  }\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ const T $>$ \&}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if two references of the same types are equal. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ref.\+h\end{DoxyCompactItemize}

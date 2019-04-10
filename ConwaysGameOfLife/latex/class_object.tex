@@ -1,0 +1,140 @@
+\hypertarget{class_object}{}\section{Object Class Reference}
+\label{class_object}\index{Object@{Object}}
+
+
+Represents the basic object class that allows for creating managed objects in the program.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+Inheritance diagram for Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.632653cm]{class_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_object_aa3e791419d84c4c346ef9499513b8e00}{$\sim$\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_object_a8c094a3284ac6d2ebedfa9645e95c35a}{equals}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$ other) const
+\begin{DoxyCompactList}\small\item\em Checks if current object is equal to other referenced object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_object_a735820b22a0356fe9afbae9e88b187d6}{operator==}} (const \mbox{\hyperlink{class_object}{Object}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if the current object is equal to the another object. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_object_afc552cc4f935b62c14c1453041ce4911}{operator!=}} (const \mbox{\hyperlink{class_object}{Object}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if the current object is not equal to the another object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_object_a2e262342c487ea7aac9059ff0ca82b29}{reference\+Equals}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$ first, const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$ second)
+\begin{DoxyCompactList}\small\item\em Checks if two different references reference to the same object in the memory. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_object_a0e9be30be18b9cc7db1e6788c6b8599f}{equals}} (const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$ first, const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$ second)
+\begin{DoxyCompactList}\small\item\em Checks if two different object are equal to each other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_object_af1fedc8e131c2654cd31830786efc720}{operator Ref$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Conversion to reference of any type. This allows fast assigning from dereferenced this variable to the reference. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_object_ad552aa04f3c6954d73ea7611c169853c}{operator const Ref$<$ const T $>$}} () const
+\begin{DoxyCompactList}\small\item\em Conversion to cosnt reference of any type. This allows fast assigning from dereferenced this variable inside const method to the reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents the basic object class that allows for creating managed objects in the program. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_object_aa3e791419d84c4c346ef9499513b8e00}\label{class_object_aa3e791419d84c4c346ef9499513b8e00}} 
+\index{Object@{Object}!````~Object@{$\sim$Object}}
+\index{````~Object@{$\sim$Object}!Object@{Object}}
+\subsubsection{\texorpdfstring{$\sim$Object()}{~Object()}}
+{\footnotesize\ttfamily virtual Object\+::$\sim$\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the object. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_object_a0e9be30be18b9cc7db1e6788c6b8599f}\label{class_object_a0e9be30be18b9cc7db1e6788c6b8599f}} 
+\index{Object@{Object}!equals@{equals}}
+\index{equals@{equals}!Object@{Object}}
+\subsubsection{\texorpdfstring{equals()}{equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool Object\+::equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$}]{first,  }\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if two different object are equal to each other. 
+
+\mbox{\Hypertarget{class_object_a8c094a3284ac6d2ebedfa9645e95c35a}\label{class_object_a8c094a3284ac6d2ebedfa9645e95c35a}} 
+\index{Object@{Object}!equals@{equals}}
+\index{equals@{equals}!Object@{Object}}
+\subsubsection{\texorpdfstring{equals()}{equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Object\+::equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if current object is equal to other referenced object. 
+
+\mbox{\Hypertarget{class_object_ad552aa04f3c6954d73ea7611c169853c}\label{class_object_ad552aa04f3c6954d73ea7611c169853c}} 
+\index{Object@{Object}!operator const Ref$<$ const T $>$@{operator const Ref$<$ const T $>$}}
+\index{operator const Ref$<$ const T $>$@{operator const Ref$<$ const T $>$}!Object@{Object}}
+\subsubsection{\texorpdfstring{operator const Ref$<$ const T $>$()}{operator const Ref< const T >()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Object\+::operator const \mbox{\hyperlink{class_ref}{Ref}}$<$ const T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Conversion to cosnt reference of any type. This allows fast assigning from dereferenced this variable inside const method to the reference. 
+
+\mbox{\Hypertarget{class_object_af1fedc8e131c2654cd31830786efc720}\label{class_object_af1fedc8e131c2654cd31830786efc720}} 
+\index{Object@{Object}!operator Ref$<$ T $>$@{operator Ref$<$ T $>$}}
+\index{operator Ref$<$ T $>$@{operator Ref$<$ T $>$}!Object@{Object}}
+\subsubsection{\texorpdfstring{operator Ref$<$ T $>$()}{operator Ref< T >()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Object\+::operator \mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Conversion to reference of any type. This allows fast assigning from dereferenced this variable to the reference. 
+
+\mbox{\Hypertarget{class_object_afc552cc4f935b62c14c1453041ce4911}\label{class_object_afc552cc4f935b62c14c1453041ce4911}} 
+\index{Object@{Object}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Object@{Object}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily virtual bool Object\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_object}{Object}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the current object is not equal to the another object. 
+
+\mbox{\Hypertarget{class_object_a735820b22a0356fe9afbae9e88b187d6}\label{class_object_a735820b22a0356fe9afbae9e88b187d6}} 
+\index{Object@{Object}!operator==@{operator==}}
+\index{operator==@{operator==}!Object@{Object}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily virtual bool Object\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_object}{Object}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the current object is equal to the another object. 
+
+\mbox{\Hypertarget{class_object_a2e262342c487ea7aac9059ff0ca82b29}\label{class_object_a2e262342c487ea7aac9059ff0ca82b29}} 
+\index{Object@{Object}!referenceEquals@{referenceEquals}}
+\index{referenceEquals@{referenceEquals}!Object@{Object}}
+\subsubsection{\texorpdfstring{referenceEquals()}{referenceEquals()}}
+{\footnotesize\ttfamily static bool Object\+::reference\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$}]{first,  }\item[{const \mbox{\hyperlink{class_ref}{Ref}}$<$ const \mbox{\hyperlink{class_object}{Object}} $>$}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if two different references reference to the same object in the memory. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Object.\+h\end{DoxyCompactItemize}

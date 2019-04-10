@@ -1,0 +1,199 @@
+\hypertarget{class_text_box}{}\section{Text\+Box Class Reference}
+\label{class_text_box}\index{TextBox@{TextBox}}
+
+
+Represents a text box field which can be edited by the user..  
+
+
+
+
+{\ttfamily \#include $<$Text\+Box.\+h$>$}
+
+Inheritance diagram for Text\+Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_text_box}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_text_box_a25b67e5ff6788c60b8aef3f3540879d0}{Text\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Instantiates a new \mbox{\hyperlink{class_text_box}{Text\+Box}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_text_box_ae49e0bebccce519f007fb8edaf9228b3}{$\sim$\+Text\+Box}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the text box object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_box_a929abf1c11ac0ae54b1c3b0c300450d7}{set\+Capacity}} (uint8\+\_\+t capacity)
+\begin{DoxyCompactList}\small\item\em Sets the capacity of the text box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_box_ac722a34fe2f513f5ea9596d4f34d67fd}{set\+On\+Changed\+Handler}} (std\+::function$<$ void(\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_object}{Object}} $>$)$>$ handler)
+\begin{DoxyCompactList}\small\item\em Sets the on changed handler invoked when the text box has changed. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_text_box_a43eb76f2ff7db001766ab9c0096e334d}{get\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Gets the text of the text box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_box_a678d90393851e2aab906e53a6762d4a6}{set\+Text}} (std\+::string value)
+\begin{DoxyCompactList}\small\item\em Sets the text of the text box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_box_ae879afb224d1ad754996d2386743c2da}{on\+Key\+Press}} (char key) override
+\begin{DoxyCompactList}\small\item\em Overrides the method allowing for editing the text box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_box_aab9c57dae96c908b9b3a4f03b837a9fe}{on\+Lost\+Focus}} () override
+\begin{DoxyCompactList}\small\item\em Overrides the method to apply button style when unfocused. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_box_acf8cced7a7c1ebb3b8bd72ee0901eef8}{on\+Got\+Focus}} () override
+\begin{DoxyCompactList}\small\item\em Overrides the method to apply button style when focused. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_box_abd8f18ee1d846bf8cdf0ab93b6302bf9}{on\+Draw}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \&graphics) override
+\begin{DoxyCompactList}\small\item\em Overrides the method allowing for the text box to be drawn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a text box field which can be edited by the user.. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_text_box_a25b67e5ff6788c60b8aef3f3540879d0}\label{class_text_box_a25b67e5ff6788c60b8aef3f3540879d0}} 
+\index{TextBox@{TextBox}!TextBox@{TextBox}}
+\index{TextBox@{TextBox}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{TextBox()}{TextBox()}}
+{\footnotesize\ttfamily Text\+Box\+::\+Text\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Instantiates a new \mbox{\hyperlink{class_text_box}{Text\+Box}} object. 
+
+\mbox{\Hypertarget{class_text_box_ae49e0bebccce519f007fb8edaf9228b3}\label{class_text_box_ae49e0bebccce519f007fb8edaf9228b3}} 
+\index{TextBox@{TextBox}!````~TextBox@{$\sim$TextBox}}
+\index{````~TextBox@{$\sim$TextBox}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{$\sim$TextBox()}{~TextBox()}}
+{\footnotesize\ttfamily virtual Text\+Box\+::$\sim$\+Text\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the text box object. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_text_box_a43eb76f2ff7db001766ab9c0096e334d}\label{class_text_box_a43eb76f2ff7db001766ab9c0096e334d}} 
+\index{TextBox@{TextBox}!getText@{getText}}
+\index{getText@{getText}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily std\+::string Text\+Box\+::get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the text of the text box. 
+
+\mbox{\Hypertarget{class_text_box_abd8f18ee1d846bf8cdf0ab93b6302bf9}\label{class_text_box_abd8f18ee1d846bf8cdf0ab93b6302bf9}} 
+\index{TextBox@{TextBox}!onDraw@{onDraw}}
+\index{onDraw@{onDraw}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{onDraw()}{onDraw()}}
+{\footnotesize\ttfamily void Text\+Box\+::on\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \&}]{graphics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method allowing for the text box to be drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics} & The graphics used to draw the text box.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_control_a5f89270d0d05a6bac9128db0b1d290d2}{Control}}.
+
+\mbox{\Hypertarget{class_text_box_acf8cced7a7c1ebb3b8bd72ee0901eef8}\label{class_text_box_acf8cced7a7c1ebb3b8bd72ee0901eef8}} 
+\index{TextBox@{TextBox}!onGotFocus@{onGotFocus}}
+\index{onGotFocus@{onGotFocus}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{onGotFocus()}{onGotFocus()}}
+{\footnotesize\ttfamily void Text\+Box\+::on\+Got\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method to apply button style when focused. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_control_ac21652bd9bd20bd53eeab52432556a0c}{Control}}.
+
+\mbox{\Hypertarget{class_text_box_ae879afb224d1ad754996d2386743c2da}\label{class_text_box_ae879afb224d1ad754996d2386743c2da}} 
+\index{TextBox@{TextBox}!onKeyPress@{onKeyPress}}
+\index{onKeyPress@{onKeyPress}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{onKeyPress()}{onKeyPress()}}
+{\footnotesize\ttfamily void Text\+Box\+::on\+Key\+Press (\begin{DoxyParamCaption}\item[{char}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method allowing for editing the text box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key that was pressed.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_control_a4731a62a9ea0510d51924509ae74c93e}{Control}}.
+
+\mbox{\Hypertarget{class_text_box_aab9c57dae96c908b9b3a4f03b837a9fe}\label{class_text_box_aab9c57dae96c908b9b3a4f03b837a9fe}} 
+\index{TextBox@{TextBox}!onLostFocus@{onLostFocus}}
+\index{onLostFocus@{onLostFocus}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{onLostFocus()}{onLostFocus()}}
+{\footnotesize\ttfamily void Text\+Box\+::on\+Lost\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overrides the method to apply button style when unfocused. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_control_abbc8ce4460f790b4a5cf3dcb102b3f46}{Control}}.
+
+\mbox{\Hypertarget{class_text_box_a929abf1c11ac0ae54b1c3b0c300450d7}\label{class_text_box_a929abf1c11ac0ae54b1c3b0c300450d7}} 
+\index{TextBox@{TextBox}!setCapacity@{setCapacity}}
+\index{setCapacity@{setCapacity}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{setCapacity()}{setCapacity()}}
+{\footnotesize\ttfamily void Text\+Box\+::set\+Capacity (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{capacity }\end{DoxyParamCaption})}
+
+
+
+Sets the capacity of the text box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The capacity to set\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_box_ac722a34fe2f513f5ea9596d4f34d67fd}\label{class_text_box_ac722a34fe2f513f5ea9596d4f34d67fd}} 
+\index{TextBox@{TextBox}!setOnChangedHandler@{setOnChangedHandler}}
+\index{setOnChangedHandler@{setOnChangedHandler}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{setOnChangedHandler()}{setOnChangedHandler()}}
+{\footnotesize\ttfamily void Text\+Box\+::set\+On\+Changed\+Handler (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_object}{Object}} $>$)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Sets the on changed handler invoked when the text box has changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler to set\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_box_a678d90393851e2aab906e53a6762d4a6}\label{class_text_box_a678d90393851e2aab906e53a6762d4a6}} 
+\index{TextBox@{TextBox}!setText@{setText}}
+\index{setText@{setText}!TextBox@{TextBox}}
+\subsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily void Text\+Box\+::set\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the text of the text box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The text to set\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Text\+Box.\+h\item 
+Text\+Box.\+cpp\end{DoxyCompactItemize}

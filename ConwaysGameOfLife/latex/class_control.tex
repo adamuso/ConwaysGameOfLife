@@ -1,0 +1,277 @@
+\hypertarget{class_control}{}\section{Control Class Reference}
+\label{class_control}\index{Control@{Control}}
+
+
+Represents a control base displayed in the application.  
+
+
+
+
+{\ttfamily \#include $<$Control.\+h$>$}
+
+Inheritance diagram for Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.632653cm]{class_control}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_control_aa730aeda4517f40bc48ba1e46ebded77}{Control}} ()
+\begin{DoxyCompactList}\small\item\em Instantiates a new \mbox{\hyperlink{class_control}{Control}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_control_a6423be6b157375ac59214eee86623b05}{$\sim$\+Control}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the control object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_control_a3a758dd5d74b1e8d6373c0c514a9613c}{set\+Position}} (\mbox{\hyperlink{struct_point}{Point}} position)
+\begin{DoxyCompactList}\small\item\em Sets the position of the control. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control_ac3e5fe103ee3a77c3980bb02771ec38c}{get\+Tab\+Stop}} () const
+\begin{DoxyCompactList}\small\item\em Gets the value indicating if tabbing between controls should stop at this control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_control_a73b8872a110ebdea56f9d5a04d115455}{set\+Tab\+Stop}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets the value indicating if tabbing between controls should stop at his control. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_control}{Control}} $>$ $>$ \& \mbox{\hyperlink{class_control_a75bb00f2b4c535741bbc5a70b75ffb82}{get\+Children}} () const
+\begin{DoxyCompactList}\small\item\em Gets the children of the control. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \& \mbox{\hyperlink{class_control_a9016bc607e76e382899be459e7d142ca}{get\+Graphics}} () const
+\begin{DoxyCompactList}\small\item\em Gets the graphics object associated with the control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_control_a2cfc3f0fc6c83e80d4e083d5b50fe3ef}{set\+Graphics}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ value)
+\begin{DoxyCompactList}\small\item\em Sets the graphics object associated with the control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_control_a3cec54dc733e8609e0b816c4e9e9f99d}{add\+Child}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_control}{Control}} $>$ child)
+\begin{DoxyCompactList}\small\item\em Adds a child to the control. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ \mbox{\hyperlink{class_control_a2575b01d5c158f11986dea96ebc8b86e}{find\+Parent}} () const
+\begin{DoxyCompactList}\small\item\em Finds the parent of the given type T for the current control. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_control_a310370bda804e4e9b80acdbc7f033402}{is\+Focued}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the control is focused. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_control_a501fa3ad934e32bb8f904f8a49bd9c20}{invalidate}} ()
+\begin{DoxyCompactList}\small\item\em Invalidates the control causing it to redraw. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_control_a5f89270d0d05a6bac9128db0b1d290d2}{on\+Draw}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \&graphics)
+\begin{DoxyCompactList}\small\item\em Occurs when the control wants to redraw itself. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_control_a4731a62a9ea0510d51924509ae74c93e}{on\+Key\+Press}} (char key)
+\begin{DoxyCompactList}\small\item\em Occurs when the control receive a key press. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_control_abbc8ce4460f790b4a5cf3dcb102b3f46}{on\+Lost\+Focus}} ()
+\begin{DoxyCompactList}\small\item\em Occurs when the control lost focus. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_control_ac21652bd9bd20bd53eeab52432556a0c}{on\+Got\+Focus}} ()
+\begin{DoxyCompactList}\small\item\em Occurs when the control receive focus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a control base displayed in the application. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_control_aa730aeda4517f40bc48ba1e46ebded77}\label{class_control_aa730aeda4517f40bc48ba1e46ebded77}} 
+\index{Control@{Control}!Control@{Control}}
+\index{Control@{Control}!Control@{Control}}
+\subsubsection{\texorpdfstring{Control()}{Control()}}
+{\footnotesize\ttfamily Control\+::\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Instantiates a new \mbox{\hyperlink{class_control}{Control}} object. 
+
+\mbox{\Hypertarget{class_control_a6423be6b157375ac59214eee86623b05}\label{class_control_a6423be6b157375ac59214eee86623b05}} 
+\index{Control@{Control}!````~Control@{$\sim$Control}}
+\index{````~Control@{$\sim$Control}!Control@{Control}}
+\subsubsection{\texorpdfstring{$\sim$Control()}{~Control()}}
+{\footnotesize\ttfamily virtual Control\+::$\sim$\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the control object. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_control_a3cec54dc733e8609e0b816c4e9e9f99d}\label{class_control_a3cec54dc733e8609e0b816c4e9e9f99d}} 
+\index{Control@{Control}!addChild@{addChild}}
+\index{addChild@{addChild}!Control@{Control}}
+\subsubsection{\texorpdfstring{addChild()}{addChild()}}
+{\footnotesize\ttfamily void Control\+::add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_control}{Control}} $>$}]{child }\end{DoxyParamCaption})}
+
+
+
+Adds a child to the control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & The child to add.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_control_a2575b01d5c158f11986dea96ebc8b86e}\label{class_control_a2575b01d5c158f11986dea96ebc8b86e}} 
+\index{Control@{Control}!findParent@{findParent}}
+\index{findParent@{findParent}!Control@{Control}}
+\subsubsection{\texorpdfstring{findParent()}{findParent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_ref}{Ref}}$<$ T $>$ Control\+::find\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the parent of the given type T for the current control. 
+
+\mbox{\Hypertarget{class_control_a75bb00f2b4c535741bbc5a70b75ffb82}\label{class_control_a75bb00f2b4c535741bbc5a70b75ffb82}} 
+\index{Control@{Control}!getChildren@{getChildren}}
+\index{getChildren@{getChildren}!Control@{Control}}
+\subsubsection{\texorpdfstring{getChildren()}{getChildren()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_control}{Control}} $>$ $>$ \& Control\+::get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the children of the control. 
+
+\mbox{\Hypertarget{class_control_a9016bc607e76e382899be459e7d142ca}\label{class_control_a9016bc607e76e382899be459e7d142ca}} 
+\index{Control@{Control}!getGraphics@{getGraphics}}
+\index{getGraphics@{getGraphics}!Control@{Control}}
+\subsubsection{\texorpdfstring{getGraphics()}{getGraphics()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \& Control\+::get\+Graphics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the graphics object associated with the control. 
+
+\mbox{\Hypertarget{class_control_ac3e5fe103ee3a77c3980bb02771ec38c}\label{class_control_ac3e5fe103ee3a77c3980bb02771ec38c}} 
+\index{Control@{Control}!getTabStop@{getTabStop}}
+\index{getTabStop@{getTabStop}!Control@{Control}}
+\subsubsection{\texorpdfstring{getTabStop()}{getTabStop()}}
+{\footnotesize\ttfamily bool Control\+::get\+Tab\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the value indicating if tabbing between controls should stop at this control. 
+
+\mbox{\Hypertarget{class_control_a501fa3ad934e32bb8f904f8a49bd9c20}\label{class_control_a501fa3ad934e32bb8f904f8a49bd9c20}} 
+\index{Control@{Control}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!Control@{Control}}
+\subsubsection{\texorpdfstring{invalidate()}{invalidate()}}
+{\footnotesize\ttfamily void Control\+::invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Invalidates the control causing it to redraw. 
+
+\mbox{\Hypertarget{class_control_a310370bda804e4e9b80acdbc7f033402}\label{class_control_a310370bda804e4e9b80acdbc7f033402}} 
+\index{Control@{Control}!isFocued@{isFocued}}
+\index{isFocued@{isFocued}!Control@{Control}}
+\subsubsection{\texorpdfstring{isFocued()}{isFocued()}}
+{\footnotesize\ttfamily bool Control\+::is\+Focued (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the control is focused. 
+
+\mbox{\Hypertarget{class_control_a5f89270d0d05a6bac9128db0b1d290d2}\label{class_control_a5f89270d0d05a6bac9128db0b1d290d2}} 
+\index{Control@{Control}!onDraw@{onDraw}}
+\index{onDraw@{onDraw}!Control@{Control}}
+\subsubsection{\texorpdfstring{onDraw()}{onDraw()}}
+{\footnotesize\ttfamily virtual void Control\+::on\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$ \&}]{graphics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs when the control wants to redraw itself. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphics} & The graphics used to draw the control.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_simulation_view_a088d2d9c386b7202fe0d552323c137c3}{Simulation\+View}}, \mbox{\hyperlink{class_text_box_abd8f18ee1d846bf8cdf0ab93b6302bf9}{Text\+Box}}, \mbox{\hyperlink{class_label_ac418a8328a971f5da7f46c9c6e9fd7e5}{Label}}, and \mbox{\hyperlink{class_button_afdb39226fa5833cdbbd6d061783024b7}{Button}}.
+
+\mbox{\Hypertarget{class_control_ac21652bd9bd20bd53eeab52432556a0c}\label{class_control_ac21652bd9bd20bd53eeab52432556a0c}} 
+\index{Control@{Control}!onGotFocus@{onGotFocus}}
+\index{onGotFocus@{onGotFocus}!Control@{Control}}
+\subsubsection{\texorpdfstring{onGotFocus()}{onGotFocus()}}
+{\footnotesize\ttfamily virtual void Control\+::on\+Got\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs when the control receive focus. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_button_a3fd6af2ee1bdd52a0b61177f80ff7d2c}{Button}}, and \mbox{\hyperlink{class_text_box_acf8cced7a7c1ebb3b8bd72ee0901eef8}{Text\+Box}}.
+
+\mbox{\Hypertarget{class_control_a4731a62a9ea0510d51924509ae74c93e}\label{class_control_a4731a62a9ea0510d51924509ae74c93e}} 
+\index{Control@{Control}!onKeyPress@{onKeyPress}}
+\index{onKeyPress@{onKeyPress}!Control@{Control}}
+\subsubsection{\texorpdfstring{onKeyPress()}{onKeyPress()}}
+{\footnotesize\ttfamily virtual void Control\+::on\+Key\+Press (\begin{DoxyParamCaption}\item[{char}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs when the control receive a key press. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key that was pressed.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_view_ab391ca9800c413c543be7f2f6b9716d2}{View}}, \mbox{\hyperlink{class_simulation_view_a3663c5246a999ab4f2ffd503c0e3d274}{Simulation\+View}}, \mbox{\hyperlink{class_button_ac697a388171f59e9953eb6ae1dcf37a1}{Button}}, \mbox{\hyperlink{class_text_box_ae879afb224d1ad754996d2386743c2da}{Text\+Box}}, and \mbox{\hyperlink{class_choose_file_view_a011a3bf65dfc4b5e02327760ab8370ea}{Choose\+File\+View}}.
+
+\mbox{\Hypertarget{class_control_abbc8ce4460f790b4a5cf3dcb102b3f46}\label{class_control_abbc8ce4460f790b4a5cf3dcb102b3f46}} 
+\index{Control@{Control}!onLostFocus@{onLostFocus}}
+\index{onLostFocus@{onLostFocus}!Control@{Control}}
+\subsubsection{\texorpdfstring{onLostFocus()}{onLostFocus()}}
+{\footnotesize\ttfamily virtual void Control\+::on\+Lost\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Occurs when the control lost focus. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_button_ac80b96f804bcb1a8cdf1b8617be02c55}{Button}}, and \mbox{\hyperlink{class_text_box_aab9c57dae96c908b9b3a4f03b837a9fe}{Text\+Box}}.
+
+\mbox{\Hypertarget{class_control_a2cfc3f0fc6c83e80d4e083d5b50fe3ef}\label{class_control_a2cfc3f0fc6c83e80d4e083d5b50fe3ef}} 
+\index{Control@{Control}!setGraphics@{setGraphics}}
+\index{setGraphics@{setGraphics}!Control@{Control}}
+\subsubsection{\texorpdfstring{setGraphics()}{setGraphics()}}
+{\footnotesize\ttfamily void Control\+::set\+Graphics (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_graphics}{Graphics}} $>$}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the graphics object associated with the control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The graphics object to set.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_control_a3a758dd5d74b1e8d6373c0c514a9613c}\label{class_control_a3a758dd5d74b1e8d6373c0c514a9613c}} 
+\index{Control@{Control}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Control@{Control}}
+\subsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Control\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{position }\end{DoxyParamCaption})}
+
+
+
+Sets the position of the control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The positiont to set.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_control_a73b8872a110ebdea56f9d5a04d115455}\label{class_control_a73b8872a110ebdea56f9d5a04d115455}} 
+\index{Control@{Control}!setTabStop@{setTabStop}}
+\index{setTabStop@{setTabStop}!Control@{Control}}
+\subsubsection{\texorpdfstring{setTabStop()}{setTabStop()}}
+{\footnotesize\ttfamily void Control\+::set\+Tab\+Stop (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the value indicating if tabbing between controls should stop at his control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to set.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Control.\+h\item 
+Control.\+cpp\end{DoxyCompactItemize}

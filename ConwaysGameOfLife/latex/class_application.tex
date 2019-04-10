@@ -1,0 +1,171 @@
+\hypertarget{class_application}{}\section{Application Class Reference}
+\label{class_application}\index{Application@{Application}}
+
+
+Represents an application hosting the views displayed in the console.  
+
+
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+Inheritance diagram for Application\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_application}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}{Application}} ()
+\begin{DoxyCompactList}\small\item\em Instantiates a new \mbox{\hyperlink{class_application}{Application}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_application_af30193b728aeacfd07b56f6a1117182f}{$\sim$\+Application}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_a17a7ce731c6cae502839fca4bfc726ea}{set\+On\+Load\+Handler}} (std\+::function$<$ void(const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_application}{Application}} $>$ \&app)$>$ handler)
+\begin{DoxyCompactList}\small\item\em Sets the handler for the on load event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$ \mbox{\hyperlink{class_application_a9099ecb8b2568c89dde070a8b701715a}{get\+Current\+View}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current running view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_a9ca5a609b230392b1bb06917ac097de6}{run}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$ view)
+\begin{DoxyCompactList}\small\item\em Runs the application and takes control over the thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_a782adfa17cf6a50b9242c0eb22447206}{run\+Modal}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$ view)
+\begin{DoxyCompactList}\small\item\em Runs the view using modal mode. Waits untile the view exits; \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_adc075972df579dbdbe46013da51ed70c}{change}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$ view)
+\begin{DoxyCompactList}\small\item\em Changes current view into another without saving the history. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_a95a10ebbce931b4c58116c492ab163be}{next}} (\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$ view)
+\begin{DoxyCompactList}\small\item\em Changes current view to the next one and saves the last one to the history. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_application_a7efbd7aad2bb4539e23d11b1f9dea252}{back}} ()
+\begin{DoxyCompactList}\small\item\em Goes back in the history and loads previous view. If current view is the last one then closes the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents an application hosting the views displayed in the console. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}\label{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}} 
+\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\subsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Application\+::\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Instantiates a new \mbox{\hyperlink{class_application}{Application}} object. 
+
+\mbox{\Hypertarget{class_application_af30193b728aeacfd07b56f6a1117182f}\label{class_application_af30193b728aeacfd07b56f6a1117182f}} 
+\index{Application@{Application}!````~Application@{$\sim$Application}}
+\index{````~Application@{$\sim$Application}!Application@{Application}}
+\subsubsection{\texorpdfstring{$\sim$Application()}{~Application()}}
+{\footnotesize\ttfamily virtual Application\+::$\sim$\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the application. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_application_a7efbd7aad2bb4539e23d11b1f9dea252}\label{class_application_a7efbd7aad2bb4539e23d11b1f9dea252}} 
+\index{Application@{Application}!back@{back}}
+\index{back@{back}!Application@{Application}}
+\subsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily void Application\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Goes back in the history and loads previous view. If current view is the last one then closes the application. 
+
+\mbox{\Hypertarget{class_application_adc075972df579dbdbe46013da51ed70c}\label{class_application_adc075972df579dbdbe46013da51ed70c}} 
+\index{Application@{Application}!change@{change}}
+\index{change@{change}!Application@{Application}}
+\subsubsection{\texorpdfstring{change()}{change()}}
+{\footnotesize\ttfamily void Application\+::change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$}]{view }\end{DoxyParamCaption})}
+
+
+
+Changes current view into another without saving the history. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & The view to which the current view will be changed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_a9099ecb8b2568c89dde070a8b701715a}\label{class_application_a9099ecb8b2568c89dde070a8b701715a}} 
+\index{Application@{Application}!getCurrentView@{getCurrentView}}
+\index{getCurrentView@{getCurrentView}!Application@{Application}}
+\subsubsection{\texorpdfstring{getCurrentView()}{getCurrentView()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$ Application\+::get\+Current\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current running view. 
+
+\mbox{\Hypertarget{class_application_a95a10ebbce931b4c58116c492ab163be}\label{class_application_a95a10ebbce931b4c58116c492ab163be}} 
+\index{Application@{Application}!next@{next}}
+\index{next@{next}!Application@{Application}}
+\subsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily void Application\+::next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$}]{view }\end{DoxyParamCaption})}
+
+
+
+Changes current view to the next one and saves the last one to the history. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & The view to which the current view will be changed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_a9ca5a609b230392b1bb06917ac097de6}\label{class_application_a9ca5a609b230392b1bb06917ac097de6}} 
+\index{Application@{Application}!run@{run}}
+\index{run@{run}!Application@{Application}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Application\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$}]{view }\end{DoxyParamCaption})}
+
+
+
+Runs the application and takes control over the thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & The main view that will be displayed at the start of the application. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_a782adfa17cf6a50b9242c0eb22447206}\label{class_application_a782adfa17cf6a50b9242c0eb22447206}} 
+\index{Application@{Application}!runModal@{runModal}}
+\index{runModal@{runModal}!Application@{Application}}
+\subsubsection{\texorpdfstring{runModal()}{runModal()}}
+{\footnotesize\ttfamily void Application\+::run\+Modal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_view}{View}} $>$}]{view }\end{DoxyParamCaption})}
+
+
+
+Runs the view using modal mode. Waits untile the view exits; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & The view that will be displayed as modal view. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_application_a17a7ce731c6cae502839fca4bfc726ea}\label{class_application_a17a7ce731c6cae502839fca4bfc726ea}} 
+\index{Application@{Application}!setOnLoadHandler@{setOnLoadHandler}}
+\index{setOnLoadHandler@{setOnLoadHandler}!Application@{Application}}
+\subsubsection{\texorpdfstring{setOnLoadHandler()}{setOnLoadHandler()}}
+{\footnotesize\ttfamily void Application\+::set\+On\+Load\+Handler (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(const \mbox{\hyperlink{class_ref}{Ref}}$<$ \mbox{\hyperlink{class_application}{Application}} $>$ \&app)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Sets the handler for the on load event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The function that will be executed when load event occurs; \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application.\+h\item 
+Application.\+cpp\end{DoxyCompactItemize}
